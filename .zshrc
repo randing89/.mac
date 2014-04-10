@@ -12,8 +12,14 @@ ZSH_THEME="agnoster"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias node='node --harmony'
+alias node="node --harmony"
 alias mou="open /Applications/Mou.app"
+
+# I hate space
+alias gadd="git add"
+alias gco="git commit -m"
+alias gpush="git push"
+alias gpull="git pull"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
