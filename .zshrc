@@ -17,7 +17,7 @@ alias mou="open /Applications/Mou.app"
 
 # I hate space
 alias gadd="git add"
-alias gco="git commit -m"
+alias gcommit="git commit -m"
 alias gpush="git push"
 alias gpull="git pull"
 
