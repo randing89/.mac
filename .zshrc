@@ -13,6 +13,7 @@ ZSH_THEME="agnoster"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias node='node --harmony'
+alias mou="open /Applications/Mou.app"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
