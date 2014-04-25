@@ -41,6 +41,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Finder: Disable file extesion change warning
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
@@ -67,6 +70,8 @@ defaults write com.apple.dock launchanim -bool false
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
+# Make keyboard repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 ###############################################################################
 # Kill affected applications                                                  #
