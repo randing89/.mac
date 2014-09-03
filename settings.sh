@@ -14,6 +14,9 @@ sudo scutil --set HostName "$name.local"
 sudo scutil --set LocalHostName "$name"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$name"
 
+# Remove dock hide delay
+defaults write com.apple.Dock autohide-delay -float 0
+
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
