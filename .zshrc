@@ -13,6 +13,7 @@ ZSH_THEME="agnoster"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias mou="open /Applications/Mou.app"
+alias npm-update-all="npm outdated | grep -v Package | awk '{print $1}' | xargs -I% npm install %@latest --save"
 
 # I hate space
 alias gadd="git add"
