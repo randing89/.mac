@@ -12,7 +12,6 @@ ZSH_THEME="agnoster"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias mou="open /Applications/Mou.app"
 alias flushdns="sudo dscacheutil -flushcache"
 function count-line() {
 	git ls-files | grep "$1" | xargs cat | wc -l
