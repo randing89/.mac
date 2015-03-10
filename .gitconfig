@@ -1,3 +1,9 @@
+[alias]
+	s = status
+	p = pull
+	d = difftool
+	m = mergetool
+	co = checkout
 [user]
 	name = Ran Ding
 	email = randing89@gmail.com
@@ -5,21 +11,18 @@
 	helper = osxkeychain
 [push]
 	default = simple
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
+[core]
+	excludesfile = /Users/ran/.gitignore_global
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false
-	keepBackup = false
+	trustexitcode = true
 [merge]
 	tool = Kaleidoscope
-
-[alias]
-	sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-	sapply = "!f() { git stash apply stash^{/$*}; }; f"
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
