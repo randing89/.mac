@@ -5,10 +5,11 @@
         <key>Disabled</key>
         <false/>
         <key>Label</key>
-        <string>com.apache.tomcat</string>
+        <string>org.apache.tomcat</string>
         <key>ProgramArguments</key>
         <array>
                 <string>/usr/local/bin/catalina</string>
+                <string>run</string>
         </array>
         <key>RunAtLoad</key>
         <true/>
