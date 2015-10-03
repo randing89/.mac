@@ -13,17 +13,23 @@ ZSH_THEME="gozilla"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias chrome='open -a "Google Chrome" --args --disable-web-security'
 alias flushdns="sudo dscacheutil -flushcache"
+alias delorig="find . -name '*.orig' -delete"
+alias rm="trash"
 function count-line() {
 	git ls-files | grep "$1" | xargs cat | wc -l
 }
 
 
-# I hate space
+# Git
 alias gadd="git add"
-alias gcommit="git commit -m"
 alias gpush="git push"
 alias gpull="git pull"
+function gcommit() {
+  args=$@
+  git commit -m "$args"
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -64,8 +70,6 @@ plugins=(git git-extras npm osx urltools encode64 brew)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -98,4 +102,5 @@ function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")  
 }
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
